@@ -1,0 +1,611 @@
+{
+  "contractName": "BizoftTokenSale",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_tokenContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/andrix/Documents/personal/chain/token/contracts/BizoftTokenSale.sol\":\"BizoftTokenSale\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/andrix/Documents/personal/chain/token/contracts/BizoftToken.sol\":{\"keccak256\":\"0xfb33672716df26feaa6c24ffa2502c6f880da770e6d67952c34f7917235508a4\",\"urls\":[\"bzzr://263034c4770867da75a34b650a7e3302fd0804a61e328af23784735fb058661a\"]},\"/Users/andrix/Documents/personal/chain/token/contracts/BizoftTokenSale.sol\":{\"keccak256\":\"0x7a4a3492858cef480cc983aa6c1862b11574aa98c3b48cdc421fc1110ced2414\",\"urls\":[\"bzzr://ff41372b3b73ca124876496491c4cec1b8d8aa6674f5d9c1a3bbf74034b4bd24\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806101988339810180604052602081101561003057600080fd5b8101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060c7806100d16000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582057d08673a5a0d7353f36a2ccf4b43d85ad9574fc367f03385c7a02d2084ca5bc0029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a7230582057d08673a5a0d7353f36a2ccf4b43d85ad9574fc367f03385c7a02d2084ca5bc0029",
+  "sourceMap": "54:212:1:-;;;142:122;8:9:-1;5:2;;;30:1;27;20:12;5:2;142:122:1;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;142:122:1;;;;;;;;;;;;;;;;207:10;199:5;;:18;;;;;;;;;;;;;;;;;;243:14;227:13;;:30;;;;;;;;;;;;;;;;;;142:122;54:212;;;;;;",
+  "deployedSourceMap": "54:212:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:212:1;;;;;;;;;;;;;;;;;;;103:32;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"./BizoftToken.sol\";\n\ncontract BizoftTokenSale{\n    address admin;\n    BizoftToken public tokenContract;\n\n    constructor(BizoftToken _tokenContract) public {\n        admin = msg.sender;\n        tokenContract = _tokenContract;\n    }\n}",
+  "sourcePath": "/Users/andrix/Documents/personal/chain/token/contracts/BizoftTokenSale.sol",
+  "ast": {
+    "absolutePath": "/Users/andrix/Documents/personal/chain/token/contracts/BizoftTokenSale.sol",
+    "exportedSymbols": {
+      "BizoftTokenSale": [
+        211
+      ]
+    },
+    "id": 212,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 190,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/andrix/Documents/personal/chain/token/contracts/BizoftToken.sol",
+        "file": "./BizoftToken.sol",
+        "id": 191,
+        "nodeType": "ImportDirective",
+        "scope": 212,
+        "sourceUnit": 189,
+        "src": "25:27:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 211,
+        "linearizedBaseContracts": [
+          211
+        ],
+        "name": "BizoftTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 193,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "84:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 192,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "84:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 195,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "103:32:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_BizoftToken_$188",
+              "typeString": "contract BizoftToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 194,
+              "name": "BizoftToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 188,
+              "src": "103:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BizoftToken_$188",
+                "typeString": "contract BizoftToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "189:75:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 200,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 193,
+                      "src": "199:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 201,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "207:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 202,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "207:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "199:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 205,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 195,
+                      "src": "227:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BizoftToken_$188",
+                        "typeString": "contract BizoftToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 206,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 197,
+                      "src": "243:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BizoftToken_$188",
+                        "typeString": "contract BizoftToken"
+                      }
+                    },
+                    "src": "227:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_BizoftToken_$188",
+                      "typeString": "contract BizoftToken"
+                    }
+                  },
+                  "id": 208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "227:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 210,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 197,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "154:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_BizoftToken_$188",
+                    "typeString": "contract BizoftToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 196,
+                    "name": "BizoftToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 188,
+                    "src": "154:11:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_BizoftToken_$188",
+                      "typeString": "contract BizoftToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:28:1"
+            },
+            "returnParameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:1"
+            },
+            "scope": 211,
+            "src": "142:122:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 212,
+        "src": "54:212:1"
+      }
+    ],
+    "src": "0:266:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/andrix/Documents/personal/chain/token/contracts/BizoftTokenSale.sol",
+    "exportedSymbols": {
+      "BizoftTokenSale": [
+        211
+      ]
+    },
+    "id": 212,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 190,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/andrix/Documents/personal/chain/token/contracts/BizoftToken.sol",
+        "file": "./BizoftToken.sol",
+        "id": 191,
+        "nodeType": "ImportDirective",
+        "scope": 212,
+        "sourceUnit": 189,
+        "src": "25:27:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 211,
+        "linearizedBaseContracts": [
+          211
+        ],
+        "name": "BizoftTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 193,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "84:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 192,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "84:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 195,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "103:32:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_BizoftToken_$188",
+              "typeString": "contract BizoftToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 194,
+              "name": "BizoftToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 188,
+              "src": "103:11:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_BizoftToken_$188",
+                "typeString": "contract BizoftToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "189:75:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 200,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 193,
+                      "src": "199:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 201,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "207:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 202,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "207:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "199:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 205,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 195,
+                      "src": "227:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BizoftToken_$188",
+                        "typeString": "contract BizoftToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 206,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 197,
+                      "src": "243:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_BizoftToken_$188",
+                        "typeString": "contract BizoftToken"
+                      }
+                    },
+                    "src": "227:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_BizoftToken_$188",
+                      "typeString": "contract BizoftToken"
+                    }
+                  },
+                  "id": 208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "227:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 210,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 197,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "154:26:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_BizoftToken_$188",
+                    "typeString": "contract BizoftToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 196,
+                    "name": "BizoftToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 188,
+                    "src": "154:11:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_BizoftToken_$188",
+                      "typeString": "contract BizoftToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "153:28:1"
+            },
+            "returnParameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:1"
+            },
+            "scope": 211,
+            "src": "142:122:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 212,
+        "src": "54:212:1"
+      }
+    ],
+    "src": "0:266:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xeeC8cDE3E753bd218E05B73066356bb2Aa518fe1",
+      "transactionHash": "0x35a7569a6b4f3972259a68e6604f2b2e4533c009a12460959b4b2b51240164bf"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-04T04:08:04.499Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
