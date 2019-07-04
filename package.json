@@ -1,0 +1,17 @@
+{
+    "name": "Bizoft-Token-Sale",
+    "version": "1.0.0",
+    "description": "bizoft token sale dapps",
+    "main": "truffle",
+    "directories": {
+        "test": "test"
+    },
+    "author": "Andrix",
+    "license": "ISC",
+    "scripts": {
+        "dev": "lite-server"
+    },
+    "devDependencies": {
+        "lite-server": "^2.5.3"
+    }
+}
