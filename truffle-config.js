@@ -23,6 +23,7 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
 module.exports = {
   /**
@@ -47,7 +48,18 @@ module.exports = {
      port: 7545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
-
+    rinkeby: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: 4,       // Any network (default: none)
+      gas: 4700000
+    },
+    infuratest: {
+      provider: () => new HDWalletProvider("260480D9E76935E843F11629704E181AA9D710D554BD21E93ECF91488A9E54EE","https://rinkeby.infura.io/v3/fc7afff393284733bbe39add7c87179c"),     // Localhost (default: none)
+      network_id: 4,
+      gas: 4700000
+    },
+ 
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
